@@ -1,4 +1,4 @@
-name: build-ublue
+name: build-solidblue
 on:
   pull_request:
   merge_group:    
@@ -20,20 +20,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: [silverblue, kinoite, vauxite, sericea, base, lxqt, mate]
-        major_version: [37, 38]
+        image_name: silverblue
+        major_version: 38
         include:
-          - major_version: 37
-            is_latest_version: false
-            is_stable_version: true
           - major_version: 38
             is_latest_version: true
             is_stable_version: true
-        exclude:
-          # There is no Fedora 37 version of sericea
-          # When F38 is added, sericea will automatically be built too
-          - image_name: sericea
-            major_version: 37
     steps: 
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
