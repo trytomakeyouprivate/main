@@ -33,10 +33,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Generate ISO  
-        uses: ublue-os/isogenerator@v2.0.2
+        uses: main/isogenerator@v2.0.2
         id: isogenerator
         with:
-          image-name: universalblue
+          image-name: solidblue
           installer-repo: releases
           installer-major-version: 38
           boot-menu-path: boot_menu.yml
