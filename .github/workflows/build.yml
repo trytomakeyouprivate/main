@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: silverblue
+        image_name: [silverblue]
         major_version: 38
         include:
           - major_version: 38
