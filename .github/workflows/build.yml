@@ -6,7 +6,7 @@ on:
     - cron: '0 7 * * *'  # 7 am everyday
   workflow_dispatch:
 env:
-    IMAGE_BASE_NAME: main
+    IMAGE_BASE_NAME: solidblue
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: [silverblue]
+        image_name: [solidblue]
         major_version: [38]
         include:
           - major_version: [38]
@@ -36,7 +36,7 @@ jobs:
           if [[ "${{ matrix.image_name }}" == "lxqt" || "${{ matrix.image_name }}" == "mate" ]]; then
               echo "SOURCE_IMAGE=base" >> $GITHUB_ENV
           else
-              echo "SOURCE_IMAGE=${{ matrix.image_name }}" >> $GITHUB_ENV
+              echo "SOURCE_IMAGE=silverblue" >> $GITHUB_ENV
           fi
           echo "IMAGE_NAME=${{ format('{0}-{1}', matrix.image_name, env.IMAGE_BASE_NAME) }}" >> $GITHUB_ENV
 
