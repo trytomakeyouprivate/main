@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - live
 name: release-please
 jobs:
   release-please:
@@ -39,7 +39,6 @@ jobs:
           image-name: solidblue
           installer-repo: releases
           installer-major-version: 38
-          boot-menu-path: boot_menu.yml
       - name: install github CLI
         run: |
           sudo dnf install 'dnf-command(config-manager)' -y
