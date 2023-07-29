@@ -49,7 +49,8 @@ jobs:
           MAJOR_VERSION="${{ matrix.major_version }}"
           COMMIT_TAGS=()
           BUILD_TAGS=()
-          Have tags for tracking builds during pull request
+          
+          # Have tags for tracking builds during pull request
           SHA_SHORT="${GITHUB_SHA::7}"
           COMMIT_TAGS+=("pr-${{ github.event.number }}-${MAJOR_VERSION}")
           COMMIT_TAGS+=("${SHA_SHORT}-${MAJOR_VERSION}")
@@ -98,8 +99,6 @@ jobs:
             org.opencontainers.image.title=${{ env.IMAGE_NAME }}
             org.opencontainers.image.version=${{ steps.labels.outputs.VERSION }}
             org.opencontainers.image.description=A hardened ${{ env.SOURCE_NAME }} image
-            # io.artifacthub.package.readme-url=https://raw.githubusercontent.com/ublue-os/main/main/README.md
-            # io.artifacthub.package.logo-url=https://avatars.githubusercontent.com/u/120078124?s=200&v=4
 
       # Build image using Buildah action
       - name: Build Image
