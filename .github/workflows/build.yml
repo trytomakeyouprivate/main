@@ -49,37 +49,37 @@ jobs:
           MAJOR_VERSION="${{ matrix.major_version }}"
           COMMIT_TAGS=()
           BUILD_TAGS=()
-          # Have tags for tracking builds during pull request
-          # SHA_SHORT="${GITHUB_SHA::7}"
-          # COMMIT_TAGS+=("pr-${{ github.event.number }}-${MAJOR_VERSION}")
-          # COMMIT_TAGS+=("${SHA_SHORT}-${MAJOR_VERSION}")
-          # if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
-          #    [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
-          #     COMMIT_TAGS+=("pr-${{ github.event.number }}")
-          #     COMMIT_TAGS+=("${SHA_SHORT}")
-          # fi
+          Have tags for tracking builds during pull request
+          SHA_SHORT="${GITHUB_SHA::7}"
+          COMMIT_TAGS+=("pr-${{ github.event.number }}-${MAJOR_VERSION}")
+          COMMIT_TAGS+=("${SHA_SHORT}-${MAJOR_VERSION}")
+          if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
+             [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
+              COMMIT_TAGS+=("pr-${{ github.event.number }}")
+              COMMIT_TAGS+=("${SHA_SHORT}")
+          fi
 
-          # BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION}-${TIMESTAMP}")
+          BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION}-${TIMESTAMP}")
 
-          # if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
-          #    [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
-          #     BUILD_TAGS+=("latest")
-          # fi
+          if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
+             [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
+              BUILD_TAGS+=("latest")
+          fi
 
-          # if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-          #     echo "Generated the following commit tags: "
-          #     for TAG in "${COMMIT_TAGS[@]}"; do
-          #         echo "${TAG}"
-          #     done
-          #     alias_tags=("${COMMIT_TAGS[@]}")
-          # else
-          #     alias_tags=("${BUILD_TAGS[@]}")
-          # fi
-          # echo "Generated the following build tags: "
-          # for TAG in "${BUILD_TAGS[@]}"; do
-          #     echo "${TAG}"
-          # done
-          # echo "alias_tags=${alias_tags[*]}" >> $GITHUB_OUTPUT
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+              echo "Generated the following commit tags: "
+              for TAG in "${COMMIT_TAGS[@]}"; do
+                  echo "${TAG}"
+              done
+              alias_tags=("${COMMIT_TAGS[@]}")
+          else
+              alias_tags=("${BUILD_TAGS[@]}")
+          fi
+          echo "Generated the following build tags: "
+          for TAG in "${BUILD_TAGS[@]}"; do
+              echo "${TAG}"
+          done
+          echo "alias_tags=${alias_tags[*]}" >> $GITHUB_OUTPUT
 
       - name: Get current version
         id: labels
