@@ -53,7 +53,7 @@ People needed to:
 ## Acknowledgements & Thanks
 - GrapheneOS for creating the hardened kernel and hardened malloc library
 - Arch Linux team for maintaining the hardened kernel
-- Divested Computer Group for maintaing the hardened malloc library
+- Divested Computer Group for maintaining the hardened malloc library
 - HardHatOS for inspiring this project and creating the RPM build of the hardened kernel and malloc library
 - Fedora team, especially the rpm-ostree developers
 - Jorge Castro and the Universal Blue team for inspiring the creation of custom build immutable images and providing templates for us to use!
