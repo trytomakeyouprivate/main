@@ -12,7 +12,7 @@
 
 
 
-All based on the Fedora-issued images, with some custom hardening to further improve security. Hardening invariably may reduce usability.
+All based on the Fedora-issued images, with some custom hardening to further improve security. Hardening invariably may reduce usability, so pin your current installation before re-basing to one of the Solidcore builds.
 
 #### Builds not yet tested - do not use - come back soon!
 
