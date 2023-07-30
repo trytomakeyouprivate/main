@@ -22,10 +22,10 @@ jobs:
       matrix:
         image_name: [solidblue]
         major_version: [38]
-        include:
-          - major_version: [38]
-            is_latest_version: true
-            is_stable_version: true
+        # include:
+        #   - major_version: [38]
+        #     is_latest_version: true
+        #     is_stable_version: true
     steps: 
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
@@ -33,11 +33,11 @@ jobs:
 
       - name: Matrix Variables
         run: |
-          if [[ "${{ matrix.image_name }}" == "lxqt" || "${{ matrix.image_name }}" == "mate" ]]; then
-              echo "SOURCE_IMAGE=base" >> $GITHUB_ENV
-          else
+          # if [[ "${{ matrix.image_name }}" == "lxqt" || "${{ matrix.image_name }}" == "mate" ]]; then
+          #     echo "SOURCE_IMAGE=base" >> $GITHUB_ENV
+          # else
               echo "SOURCE_IMAGE=silverblue" >> $GITHUB_ENV
-          fi
+          # fi
           echo "IMAGE_NAME=${{ matrix.image_name }}" >> $GITHUB_ENV
 
       - name: Generate tags
