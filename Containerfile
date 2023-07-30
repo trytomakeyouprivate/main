@@ -11,8 +11,6 @@ ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
 ADD build.sh /tmp/build.sh
 ADD post-install.sh /tmp/post-install.sh
 
-COPY --from=ghcr.io/ublue-os/config:latest /rpms /tmp/rpms
-
 RUN /tmp/build.sh
 RUN /tmp/post-install.sh
 RUN rm -rf /tmp/* /var/*
