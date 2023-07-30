@@ -1,17 +1,17 @@
 # Solidcore: Hardened Immutable Fedora
-### Current status: building, work in progress, do not use
+#### Current status: building, work in progress, do not use
 
 ## Variants:
-### Solidcore = hardened CoreOS (no desktop)
-### Solidblue = hardened Silverblue (GNOME Desktop)
-### Kinsolid = hardened Kinoite (KDE Desktop)
-### Sersolid = hardened Sericea (Sway Desktop)
-### Solidbud = hardened Onyx (Budgie Desktop)
-### Solidite = hardened Vauxite (XFCE Desktop)
+#### Solidcore = hardened CoreOS (no desktop)
+#### Solidblue = hardened Silverblue (GNOME Desktop)
+#### Kinsolid = hardened Kinoite (KDE Desktop)
+#### Sersolid = hardened Sericea (Sway Desktop)
+#### Solidbud = hardened Onyx (Budgie Desktop)
+#### Solidite = hardened Vauxite (XFCE Desktop)
 
 All based on the Fedora-issued images, with some custom hardening to further improve security. Hardening invariably may reduce usability.
 
-## Builds not yet working - do not use - come back soon!
+#### Builds not yet working - do not use - come back soon!
 
 ## Planned Features
 - rebase images to hardened linux kernel
@@ -30,8 +30,12 @@ All based on the Fedora-issued images, with some custom hardening to further imp
 - review of SELinux policies
 - plus more...
 
+
+
 ## Suggested Requirements
 - installation of Silverblue (or other version of immutable Fedora) on a LUKS encrypted HDD/SSD.
+
+
 
 ## Help Welcome
 People needed to:
@@ -39,7 +43,9 @@ People needed to:
 - Test builds
 - Document use cases
 
-### Acknowledgements & Thanks
+
+
+## Acknowledgements & Thanks
 - GrapheneOS for creating the hardened kernel and hardened malloc library
 - Arch Linux team for maintaining the hardened kernel
 - Divested Computer Group for maintaing the hardened malloc library
