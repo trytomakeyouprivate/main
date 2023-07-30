@@ -7,7 +7,7 @@
 #### - Kinsolid = hardened Kinoite (KDE Desktop)
 #### - Sersolid = hardened Sericea (Sway Desktop)
 #### - Solidbud = hardened Onyx (Budgie Desktop)
-#### - Solidite = hardened Vauxite (XFCE Desktop)
+#### - Solidx = hardened Vauxite (XFCE Desktop)
 
 
 
