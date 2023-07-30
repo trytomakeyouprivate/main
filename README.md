@@ -14,7 +14,7 @@
 
 All based on the Fedora-issued images, with some custom hardening to further improve security. Hardening invariably may reduce usability.
 
-#### Builds not yet working - do not use - come back soon!
+#### Builds not yet tested - do not use - come back soon!
 
 
 
