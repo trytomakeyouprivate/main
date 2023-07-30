@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: [solidblue, kinsolid, solidbud, sersolid, solidite]
+        image_name: [solidblue, kinsolid, solidbud, sersolid, solidx]
         major_version: [38]
     steps: 
       # Checkout push-to-registry action GitHub repository
@@ -35,7 +35,7 @@ jobs:
               echo "SOURCE_IMAGE=onyx" >> $GITHUB_ENV
           if [[ "${{ matrix.image_name }}" == "sersolid" ]]; then
               echo "SOURCE_IMAGE=sericea" >> $GITHUB_ENV
-          if [[ "${{ matrix.image_name }}" == "solidite" ]]; then
+          if [[ "${{ matrix.image_name }}" == "solidx" ]]; then
               echo "SOURCE_IMAGE=vauxite" >> $GITHUB_ENV
           else
               echo "SOURCE_IMAGE=silverblue" >> $GITHUB_ENV
