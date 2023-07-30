@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: [solidblue]
+        image_name: [solidblue, kinsolid]
         major_version: [38]
         # include:
         #   - major_version: [38]
@@ -33,11 +33,11 @@ jobs:
 
       - name: Matrix Variables
         run: |
-          # if [[ "${{ matrix.image_name }}" == "lxqt" || "${{ matrix.image_name }}" == "mate" ]]; then
-          #     echo "SOURCE_IMAGE=base" >> $GITHUB_ENV
-          # else
+          if [[ "${{ matrix.image_name }}" == "kinsolid" ]]; then
+              echo "SOURCE_IMAGE=kinoite" >> $GITHUB_ENV
+          else
               echo "SOURCE_IMAGE=silverblue" >> $GITHUB_ENV
-          # fi
+          fi
           echo "IMAGE_NAME=${{ matrix.image_name }}" >> $GITHUB_ENV
 
       - name: Generate tags
