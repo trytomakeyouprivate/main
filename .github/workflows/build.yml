@@ -1,4 +1,4 @@
-name: build-solidblue
+name: build-solidcore
 on:
   pull_request:
   merge_group:    
@@ -6,7 +6,7 @@ on:
     - cron: '0 7 * * *'  # 7 am everyday
   workflow_dispatch:
 env:
-    IMAGE_BASE_NAME: solidblue
+    IMAGE_BASE_NAME: solidcore
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
 jobs:
@@ -29,6 +29,9 @@ jobs:
 
       - name: Matrix Variables
         run: |
+          if [[ "${{ matrix.image_name }}" == "solidblue" ]]; then
+              echo "SOURCE_IMAGE=silverblue" >> $GITHUB_ENV
+          fi
           if [[ "${{ matrix.image_name }}" == "kinsolid" ]]; then
               echo "SOURCE_IMAGE=kinoite" >> $GITHUB_ENV
           fi
@@ -40,8 +43,6 @@ jobs:
           fi
           if [[ "${{ matrix.image_name }}" == "solidx" ]]; then
               echo "SOURCE_IMAGE=vauxite" >> $GITHUB_ENV
-          else
-              echo "SOURCE_IMAGE=silverblue" >> $GITHUB_ENV
           fi
           echo "IMAGE_NAME=${{ matrix.image_name }}" >> $GITHUB_ENV
 
