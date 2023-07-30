@@ -54,18 +54,18 @@ jobs:
           SHA_SHORT="${GITHUB_SHA::7}"
           COMMIT_TAGS+=("pr-${{ github.event.number }}-${MAJOR_VERSION}")
           COMMIT_TAGS+=("${SHA_SHORT}-${MAJOR_VERSION}")
-          if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
-             [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
-              COMMIT_TAGS+=("pr-${{ github.event.number }}")
-              COMMIT_TAGS+=("${SHA_SHORT}")
-          fi
+          # if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
+          #    [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
+          #     COMMIT_TAGS+=("pr-${{ github.event.number }}")
+          #     COMMIT_TAGS+=("${SHA_SHORT}")
+          # fi
 
           BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION}-${TIMESTAMP}")
 
-          if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
-             [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
-              BUILD_TAGS+=("latest")
-          fi
+          # if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
+          #    [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
+          #     BUILD_TAGS+=("latest")
+          # fi
 
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
               echo "Generated the following commit tags: "
