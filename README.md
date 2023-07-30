@@ -2,12 +2,13 @@
 #### Current status: building, work in progress, do not use
 
 ## Variants
-#### - Solidcore = hardened CoreOS (no desktop)
-#### - Solidblue = hardened Silverblue (GNOME Desktop)
-#### - Kinsolid = hardened Kinoite (KDE Desktop)
-#### - Sersolid = hardened Sericea (Sway Desktop)
-#### - Solidbud = hardened Onyx (Budgie Desktop)
-#### - Solidx = hardened Vauxite (XFCE Desktop)
+
+- **Solidcore** = hardened CoreOS (no desktop)
+- **Solidblue** = hardened Silverblue (GNOME Desktop)
+- **Kinsolid** = hardened Kinoite (KDE Desktop)
+- **Sersolid** = hardened Sericea (Sway Desktop)
+- **Solidbud** = hardened Onyx (Budgie Desktop)
+- **Solidx** = hardened Vauxite (XFCE Desktop)
 
 
 
