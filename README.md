@@ -7,8 +7,7 @@
 - **Solidblue** = hardened Silverblue (GNOME Desktop)
 - **Kinsolid** = hardened Kinoite (KDE Desktop)
 - **Sersolid** = hardened Sericea (Sway Desktop)
-- **Solidbud** = hardened Onyx (Budgie Desktop)
-- **Solidx** = hardened Vauxite (XFCE Desktop)
+- **Solidbud** = hardened Onyx (Budgie Desktop, will be built once Fedora 39 is released) 
 - **Sosolid** = hardened Sodalite* (Pantheon Desktop)
 
 _*Not an official Fedora build. Created and maintained by electricduck._
