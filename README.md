@@ -8,12 +8,9 @@
 - **Kinsolid** = hardened Kinoite (KDE Desktop)
 - **Sersolid** = hardened Sericea (Sway Desktop)
 - **Solidbud** = hardened Onyx (Budgie Desktop, will be built once Fedora 39 is released) 
-- **Sosolid** = hardened Sodalite* (Pantheon Desktop)
-
-_*Not an official Fedora build. Created and maintained by electricduck._
 
 
-All (except Sodalite) based on the official Fedora-issued images, with custom hardening to further improve security. Hardening invariably may reduce usability, so pin your current installation before re-basing to one of the Solidcore builds so you can always revert back to your previous rpm-ostree configuration.
+All based on the official Fedora-issued images, with custom hardening to further improve security. Hardening invariably may reduce usability, so pin your current installation before re-basing to one of the Solidcore builds so you can always revert back to your previous rpm-ostree configuration.
 
 #### Builds not yet tested - do not use - come back soon!
 
@@ -54,6 +51,7 @@ Details to follow...
 
 ## Help Welcome
 People needed to:
+- Port [sodalite](https://github.com/sodaliterocks/sodalite) into Solidcore
 - Create logo
 - Test builds
 - Document use cases
