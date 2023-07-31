@@ -7,10 +7,11 @@
 - **Solidblue** = hardened Silverblue (GNOME Desktop)
 - **Kinsolid** = hardened Kinoite (KDE Desktop)
 - **Sersolid** = hardened Sericea (Sway Desktop) - _pronounced 'Sir Solid'_
+- **Solidx** = hardened Vauxite (XFCE Desktop)
 - **Solidbud** = hardened Onyx (Budgie Desktop, to be released when Fedora 39 is available) 
 
 
-All based on the official Fedora-issued images, with custom hardening to further improve security. Hardening invariably may reduce usability, so pin your current installation before re-basing to one of the Solidcore builds so you can always revert back to your previous rpm-ostree configuration.
+All based on Fedora community maintained images, with custom hardening to further improve security. Hardening invariably may reduce usability, so pin your current installation before re-basing to one of the Solidcore builds so you can always revert back to your previous rpm-ostree configuration.
 
 #### Builds not yet tested - do not use - come back soon!
 
