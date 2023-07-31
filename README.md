@@ -3,7 +3,7 @@
 
 ## Variants
 
-- **Solidcore** = hardened CoreOS (no desktop)
+- **Solidcore** = hardened base (no desktop)
 - **Solidblue** = hardened Silverblue (GNOME Desktop)
 - **Kinsolid** = hardened Kinoite (KDE Desktop)
 - **Sersolid** = hardened Sericea (Sway Desktop) - _pronounced 'Sir Solid'_
