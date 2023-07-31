@@ -9,16 +9,20 @@
 - **Sersolid** = hardened Sericea (Sway Desktop)
 - **Solidbud** = hardened Onyx (Budgie Desktop)
 - **Solidx** = hardened Vauxite (XFCE Desktop)
+- **Sosolid** = hardened Sodalite* (Pantheon Desktop)
+
+_*Not an official Fedora build. Created and maintained by electricduck._
 
 
-
-All based on the Fedora-issued images, with some custom hardening to further improve security. Hardening invariably may reduce usability, so pin your current installation before re-basing to one of the Solidcore builds.
+All (except Sodalite) based on the official Fedora-issued images, with custom hardening to further improve security. Hardening invariably may reduce usability, so pin your current installation before re-basing to one of the Solidcore builds so you can always revert back to your previous rpm-ostree configuration.
 
 #### Builds not yet tested - do not use - come back soon!
 
 
 
 ## Planned Features
+This project will focus on customisations that improve the security of the operating system and hardware. Few, if any, user-facing improvements will be made - such as pre-installing a separate browser, a VPN product, etc.
+
 - rebase images to hardened linux kernel
 - add hardened_malloc
 - add auto updates for rpm-ostree and flatpak
@@ -40,13 +44,21 @@ All based on the Fedora-issued images, with some custom hardening to further imp
 ## Suggested Requirements
 - installation of Silverblue (or other version of immutable Fedora) on a LUKS encrypted HDD/SSD.
 
+## Installation Instructions
+Details to follow...
 
+## Post-installation Instructions
+1. Configure and enable USBGuard - details to follow
+2. Configure and restart DNSCrypt-proxy
+3. Consider installing a more secure and private out-of-the-box browser
+4. Use a VPN on non-WPA3 wifi connections
 
 ## Help Welcome
 People needed to:
 - Create logo
 - Test builds
 - Document use cases
+- Suggest ideas and improvements
 
 
 
@@ -57,3 +69,4 @@ People needed to:
 - HardHatOS for inspiring this project and creating the RPM build of the hardened kernel and malloc library
 - Fedora team, especially the rpm-ostree developers
 - Jorge Castro and the Universal Blue team for inspiring the creation of custom build immutable images and providing templates for us to use!
+- electricduck for creating an immutable Fedora image of Pantheon - a beautiful, elegent desktop
