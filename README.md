@@ -20,7 +20,7 @@ All based on the official Fedora-issued images, with custom hardening to further
 This project will focus on customisations that improve the security of the operating system and hardware. Few, if any, user-facing improvements will be made - such as pre-installing a separate browser, a VPN product, etc.
 
 - rebase images to hardened linux kernel
-- add hardened_malloc
+- add hardened_malloc _(currently on hold - breaks login function on GNOME)_
 - add auto updates for rpm-ostree and flatpak
 - baked-in support for Yubikey, Nitrokey and Google Titan USB
 - add USBGuard to lockdown USB ports
