@@ -36,7 +36,7 @@ jobs:
         uses: main/isogenerator@v2.0.2
         id: isogenerator
         with:
-          image-name: solidblue
+          image-name: solidcore
           installer-repo: releases
           installer-major-version: 38
       - name: install github CLI
