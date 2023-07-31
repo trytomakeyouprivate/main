@@ -20,7 +20,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: [solidblue, kinsolid, solidbud, sersolid, solidx]
+      # add solidbud once Fedora 39 releases
+        image_name: [solidblue, kinsolid, sersolid]
         major_version: [38]
     steps: 
       # Checkout push-to-registry action GitHub repository
@@ -35,14 +36,11 @@ jobs:
           if [[ "${{ matrix.image_name }}" == "kinsolid" ]]; then
               echo "SOURCE_IMAGE=kinoite" >> $GITHUB_ENV
           fi
-          if [[ "${{ matrix.image_name }}" == "solidbud" ]]; then
-              echo "SOURCE_IMAGE=onyx" >> $GITHUB_ENV
-          fi
           if [[ "${{ matrix.image_name }}" == "sersolid" ]]; then
               echo "SOURCE_IMAGE=sericea" >> $GITHUB_ENV
           fi
-          if [[ "${{ matrix.image_name }}" == "solidx" ]]; then
-              echo "SOURCE_IMAGE=vauxite" >> $GITHUB_ENV
+          if [[ "${{ matrix.image_name }}" == "solidbud" ]]; then
+              echo "SOURCE_IMAGE=onyx" >> $GITHUB_ENV
           fi
           echo "IMAGE_NAME=${{ matrix.image_name }}" >> $GITHUB_ENV
 
@@ -94,7 +92,7 @@ jobs:
           labels: |
             org.opencontainers.image.title=${{ env.IMAGE_NAME }}
             org.opencontainers.image.version=${{ steps.labels.outputs.VERSION }}
-            org.opencontainers.image.description=A hardened ${{ env.SOURCE_NAME }} image
+            org.opencontainers.image.description=A hardened ${{ env.SOURCE_IMAGE }} image
 
       # Build image using Buildah action
       - name: Build Image
