@@ -7,7 +7,7 @@
 - **Solidblue** = hardened Silverblue (GNOME Desktop)
 - **Kinsolid** = hardened Kinoite (KDE Desktop)
 - **Sersolid** = hardened Sericea (Sway Desktop)
-- **Solidbud** = hardened Onyx (Budgie Desktop, will be built once Fedora 39 is released) 
+- **Solidbud** = hardened Onyx (Budgie Desktop, to be released when Fedora 39 is available) 
 
 
 All based on the official Fedora-issued images, with custom hardening to further improve security. Hardening invariably may reduce usability, so pin your current installation before re-basing to one of the Solidcore builds so you can always revert back to your previous rpm-ostree configuration.
@@ -51,7 +51,7 @@ Details to follow...
 
 ## Help Welcome
 People needed to:
-- Port [sodalite](https://github.com/sodaliterocks/sodalite) into Solidcore
+- Port [sodalite](https://github.com/sodaliterocks/sodalite) into Solidcore (planned name... wait for it... Sosolid 😅)
 - Create logo
 - Test builds
 - Document use cases
@@ -66,4 +66,3 @@ People needed to:
 - HardHatOS for inspiring this project and creating the RPM build of the hardened kernel and malloc library
 - Fedora team, especially the rpm-ostree developers
 - Jorge Castro and the Universal Blue team for inspiring the creation of custom build immutable images and providing templates for us to use!
-- electricduck for creating an immutable Fedora image of Pantheon - a beautiful, elegent desktop
