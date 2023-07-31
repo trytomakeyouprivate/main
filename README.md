@@ -6,7 +6,7 @@
 - **Solidcore** = hardened CoreOS (no desktop)
 - **Solidblue** = hardened Silverblue (GNOME Desktop)
 - **Kinsolid** = hardened Kinoite (KDE Desktop)
-- **Sersolid** = hardened Sericea (Sway Desktop)
+- **Sersolid** = hardened Sericea (Sway Desktop) - _pronounced 'Sir Solid'_
 - **Solidbud** = hardened Onyx (Budgie Desktop, to be released when Fedora 39 is available) 
 
 
