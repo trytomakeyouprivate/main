@@ -39,7 +39,9 @@ This project will focus on customisations that improve the security of the opera
 
 
 ## Suggested Requirements
-- installation of Silverblue (or other version of immutable Fedora) on a LUKS encrypted HDD/SSD.
+- installation of Silverblue (or other version of immutable Fedora) on a LUKS 2 encrypted HDD/SSD (recent encryption)
+- Dont use a root account, create an administrative user with sudo rights
+- Update your current system and save a snapshot with `sudo ostree admin pin 1` (0: staged, 1:current, 2-x: other ones)
 
 ## Installation Instructions
 Details to follow...
@@ -47,7 +49,7 @@ Details to follow...
 ## Post-installation Instructions
 1. Configure and enable USBGuard - details to follow
 2. Configure and restart DNSCrypt-proxy
-3. Consider installing a more secure and private out-of-the-box browser
+3. Consider installing a more secure and private out-of-the-box browser (Librewolf, Tor-Browser from Flathub are recommended)
 4. Use a VPN on non-WPA3 wifi connections
 
 ## Help Welcome
