@@ -28,6 +28,8 @@ This project will focus on customisations that improve the security of the opera
 - harden network settings to block various ICMP based attacks
 - revised firewall rules
 - implement DNSCrypt-proxy to encrypt all DNS lookups
+- harden systemd-resolved
+- randomize mac addresses with a way to turn it off for trusted networks
 - review potential data leaks, e.g. fedora pings, NTP servers
 - lock root access
 - enforce strong passwords
@@ -36,10 +38,12 @@ This project will focus on customisations that improve the security of the opera
 - review of SELinux policies
 - plus more...
 
+Ideas:
+- restore captive portal functionality (no DNSCrypt, automatic DNS, no HTTPS enforced)
 
 
 ## Suggested Requirements
-- installation of Silverblue (or other version of immutable Fedora) on a LUKS 2 encrypted HDD/SSD (recent encryption)
+- Installation of Silverblue (or other version of immutable Fedora) on a LUKS 2 encrypted HDD/SSD ()
 - Dont use a root account, create an administrative user with sudo rights
 - Update your current system and save a snapshot with `sudo ostree admin pin 1` (0: staged, 1:current, 2-x: other ones)
 
